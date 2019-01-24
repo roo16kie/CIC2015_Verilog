@@ -1,0 +1,122 @@
+ncverilog: 14.10-s005: (c) Copyright 1995-2014 Cadence Design Systems, Inc.
+TOOL:	ncverilog	14.10-s005: Started on Jan 13, 2019 at 21:54:03 CST
+ncverilog
+	testfixture.v
+	SET.v
+	+access+r
+	+notimingcheck
+	+define+MD4
+file: testfixture.v
+	module worklib.testfixture1:v
+		errors: 0, warnings: 0
+file: SET.v
+	module worklib.SET:v
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.SET:v <0x323f625c>
+			streams:  38, words: 14416
+		worklib.testfixture1:v <0x0ceb9a13>
+			streams:  10, words: 11103
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                  Instances  Unique
+		Modules:                  2       2
+		Registers:               40      40
+		Scalar wires:            10       -
+		Vectored wires:          13       -
+		Always blocks:           12      12
+		Initial blocks:           6       6
+		Cont. assignments:       13      15
+		Pseudo assignments:       2       2
+		Simulation timescale:  10ps
+	Writing initial simulation snapshot: worklib.testfixture1:v
+Loading snapshot worklib.testfixture1:v .................... Done
+*Verdi3* Loading libsscore_ius141.so
+*Verdi3* : Enable Parallel Dumping.
+ncsim> source /usr/cad/cadence/INCISIV/cur/tools/inca/files/ncsimrc
+ncsim> run
+FSDB Dumper for IUS, Release Verdi3_J-2014.12-SP3, Linux, 07/05/2015
+(C) 1996 - 2015 by Synopsys, Inc.
+*Verdi3* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
+*Verdi3* : Create FSDB file 'SET.fsdb'
+*Verdi3* : Begin traversing the scopes, layer (0).
+*Verdi3* : End of traversing.
+--------------------------- [ Function 4. Simulation START !! ] ---------------------------
+ Pattern           0 at Mode 3 is PASS !
+ Pattern           1 at Mode 3 is PASS !
+ Pattern           2 at Mode 3 is PASS !
+ Pattern           3 at Mode 3 is PASS !
+ Pattern           4 at Mode 3 is PASS !
+ Pattern           5 at Mode 3 is PASS !
+ Pattern           6 at Mode 3 is PASS !
+ Pattern           7 at Mode 3 is PASS !
+ Pattern           8 at Mode 3 is PASS !
+ Pattern           9 at Mode 3 is PASS !
+ Pattern          10 at Mode 3 is PASS !
+ Pattern          11 at Mode 3 is PASS !
+ Pattern          12 at Mode 3 is PASS !
+ Pattern          13 at Mode 3 is PASS !
+ Pattern          14 at Mode 3 is PASS !
+ Pattern          15 at Mode 3 is PASS !
+ Pattern          16 at Mode 3 is PASS !
+ Pattern          17 at Mode 3 is PASS !
+ Pattern          18 at Mode 3 is PASS !
+ Pattern          19 at Mode 3 is PASS !
+ Pattern          20 at Mode 3 is PASS !
+ Pattern          21 at Mode 3 is PASS !
+ Pattern          22 at Mode 3 is PASS !
+ Pattern          23 at Mode 3 is PASS !
+ Pattern          24 at Mode 3 is PASS !
+ Pattern          25 at Mode 3 is PASS !
+ Pattern          26 at Mode 3 is PASS !
+ Pattern          27 at Mode 3 is PASS !
+ Pattern          28 at Mode 3 is PASS !
+ Pattern          29 at Mode 3 is PASS !
+ Pattern          30 at Mode 3 is PASS !
+ Pattern          31 at Mode 3 is PASS !
+ Pattern          32 at Mode 3 is PASS !
+ Pattern          33 at Mode 3 is PASS !
+ Pattern          34 at Mode 3 is PASS !
+ Pattern          35 at Mode 3 is PASS !
+ Pattern          36 at Mode 3 is PASS !
+ Pattern          37 at Mode 3 is PASS !
+ Pattern          38 at Mode 3 is PASS !
+ Pattern          39 at Mode 3 is PASS !
+ Pattern          40 at Mode 3 is PASS !
+ Pattern          41 at Mode 3 is PASS !
+ Pattern          42 at Mode 3 is PASS !
+ Pattern          43 at Mode 3 is PASS !
+ Pattern          44 at Mode 3 is PASS !
+ Pattern          45 at Mode 3 is PASS !
+ Pattern          46 at Mode 3 is PASS !
+ Pattern          47 at Mode 3 is PASS !
+ Pattern          48 at Mode 3 is PASS !
+ Pattern          49 at Mode 3 is PASS !
+ Pattern          50 at Mode 3 is PASS !
+ Pattern          51 at Mode 3 is PASS !
+ Pattern          52 at Mode 3 is PASS !
+ Pattern          53 at Mode 3 is PASS !
+ Pattern          54 at Mode 3 is PASS !
+ Pattern          55 at Mode 3 is PASS !
+ Pattern          56 at Mode 3 is PASS !
+ Pattern          57 at Mode 3 is PASS !
+ Pattern          58 at Mode 3 is PASS !
+ Pattern          59 at Mode 3 is PASS !
+ Pattern          60 at Mode 3 is PASS !
+ Pattern          61 at Mode 3 is PASS !
+ Pattern          62 at Mode 3 is PASS !
+ Pattern          63 at Mode 3 is PASS !
+--------------------------- Simulation FINISH !!---------------------------
+============================================================================
+
+ \(^o^)/ CONGRATULATIONS!!  The simulation result is PASS!!!
+
+============================================================================
+Simulation complete via $finish(1) at time 165810 NS + 0
+./testfixture.v:131 $finish;
+ncsim> exit
+TOOL:	ncverilog	14.10-s005: Exiting on Jan 13, 2019 at 21:54:12 CST  (total: 00:00:09)

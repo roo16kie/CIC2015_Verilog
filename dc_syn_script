@@ -1,0 +1,42 @@
+#---------------------------------------
+#-- How to use this script?
+#--         source dc_syn_script
+#---------------------------------------
+#-- note: 
+#--   You should edit your "design name"
+#--   and "path of files".
+#---------------------------------------
+
+## edit your top module name
+set TOP "SET"
+
+## edit your path
+set your_path "/home/student/e94041107/2015"
+
+
+set rtl_design "$TOP.v"
+set SDC "$TOP.sdc"
+set netlist "$TOP\_syn.v"
+set DDC "$TOP\_syn.ddc"
+set SDF "$TOP\_syn.sdf"
+##------------------------------------------
+##read design.v
+read_file -format verilog $your_path/$rtl_design -autoread -top $TOP
+current_design $TOP
+
+##source design.sdc
+source $your_path/$SDC 
+compile -inc -only_hold_time
+
+##report timing
+#uplevel #0 { report_timing -path full -delay max -nworst 1 -max_paths 1 -significant_digits 2 -sort_by group }
+report_timing -path full -delay max -nworst 1 -max_paths 1 -significant_digits 2 -sort_by group
+
+##report area
+#uplevel #0 { report_area }
+report_area
+
+##write design_syn.v, design_syn.ddc, design_syn.sdf
+write -hierarchy -format verilog -output $your_path/$netlist
+write -hierarchy -format ddc -output $your_path/$DDC
+write_sdf -version 2.1 -context verilog -load_delay net $SDF
